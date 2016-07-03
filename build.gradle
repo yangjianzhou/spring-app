@@ -1,0 +1,34 @@
+apply plugin: "java"
+apply plugin: "idea"
+apply plugin: "eclipse"
+apply plugin: "eclipse-wtp"
+apply plugin : 'jetty'
+
+idea {
+    module {
+        downloadSources = true
+        downloadJavadoc = true
+    }
+}
+
+repositories {
+    mavenCentral()
+ //   mavenLocal()
+}
+
+
+dependencies {
+    compile 'org.springframework:spring-context:4.0.5.RELEASE'
+    compile 'org.springframework:spring-web:4.0.5.RELEASE'
+    compile 'org.springframework:spring-webmvc:4.0.5.RELEASE'
+    compile 'org.springframework:spring-tx:4.0.5.RELEASE'
+    compile 'org.springframework:spring-orm:4.0.5.RELEASE'
+    compile 'org.springframework:spring-test:4.0.5.RELEASE'
+}
+
+jettyRun{
+    httpPort 6094
+    contextPath project.name
+    scanIntervalSeconds 0
+    reload "automatic"
+}
