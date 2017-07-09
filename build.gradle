@@ -24,6 +24,9 @@ dependencies {
     compile 'org.springframework:spring-tx:4.0.5.RELEASE'
     compile 'org.springframework:spring-orm:4.0.5.RELEASE'
     compile 'org.springframework:spring-test:4.0.5.RELEASE'
+    compile 'com.google.code.gson:gson:2.7'
+    compile  'org.apache.hadoop:hadoop-common:2.7.2'
+
 }
 
 jettyRun{

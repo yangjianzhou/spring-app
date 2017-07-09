@@ -1,6 +1,7 @@
 package com.yangjianzhou.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
 /**
@@ -8,12 +9,18 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
+@Lazy
 public class CustomerService {
 
     @Autowired
     private ProductService productService ;
 
-    public void  printProduct(){
-        productService.getProductDetail();
+    private int age = 123 ;
+
+    private String name ;
+
+
+    public void setName(){
+        this.name = "ctgu";
     }
 }
