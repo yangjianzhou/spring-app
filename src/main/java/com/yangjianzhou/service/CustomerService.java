@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
-@Lazy
 public class CustomerService {
 
     @Autowired
